@@ -5,7 +5,7 @@ Client-side ESP mod that highlights monster spawners through walls.
 Works in singleplayer and multiplayer (it only sees chunks the server has loaded for you).
 
 ## Download / file
-- `spawnerfinder-1.23.2+1.21.11.jar` — the mod (put this in your `mods` folder)
+- `spawnerfinder-1.23.3+1.21.11.jar` — the mod (put this in your `mods` folder)
 - Full source code: `spawner-finder/` project in the workspace
 
 ## Requirements
@@ -16,7 +16,7 @@ Works in singleplayer and multiplayer (it only sees chunks the server has loaded
 
 ## Install
 1. Install Fabric for 1.21.11.
-2. Drop **Fabric API** and **`spawnerfinder-1.23.2+1.21.11.jar`** into `.minecraft/mods`.
+2. Drop **Fabric API** and **`spawnerfinder-1.23.3+1.21.11.jar`** into `.minecraft/mods`.
 3. Launch the game with the Fabric profile.
 
 ## Controls
@@ -220,3 +220,5 @@ B -> **BUILDER** panel. Modes (walk around, it builds):
 **v1.23.1:** Auto Kill Bats now CHASES the bat — runs after it on foot (sprints, jumps when it's above/blocked) or flies straight at it in Creative flight, until you press stop (toggle off). Stops moving when in punch reach or no bat is near.
 
 **v1.23.2:** Auto Kill Bats chase is walk-only (no sprint, no fly, no jump).
+
+**v1.23.3:** Auto Kill Bats is smarter when stuck: if it barely moved for ~1s while chasing, it ducks (sneaks) for 1.5s to squeeze under/through the blockage, then stands and continues (status shows 'stuck — ducking under…').
