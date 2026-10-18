@@ -5,7 +5,7 @@ Client-side ESP mod that highlights monster spawners through walls.
 Works in singleplayer and multiplayer (it only sees chunks the server has loaded for you).
 
 ## Download / file
-- `spawnerfinder-1.21.2+1.21.11.jar` — the mod (put this in your `mods` folder)
+- `spawnerfinder-1.21.4+1.21.11.jar` — the mod (put this in your `mods` folder)
 - Full source code: `spawner-finder/` project in the workspace
 
 ## Requirements
@@ -16,7 +16,7 @@ Works in singleplayer and multiplayer (it only sees chunks the server has loaded
 
 ## Install
 1. Install Fabric for 1.21.11.
-2. Drop **Fabric API** and **`spawnerfinder-1.21.2+1.21.11.jar`** into `.minecraft/mods`.
+2. Drop **Fabric API** and **`spawnerfinder-1.21.4+1.21.11.jar`** into `.minecraft/mods`.
 3. Launch the game with the Fabric profile.
 
 ## Controls
@@ -192,3 +192,7 @@ B -> **BUILDER** panel. Modes (walk around, it builds):
 **v1.21.1:** UI upgrade (same drag-panel layout): bigger panels and rows, gradient headers with category icons, larger toggle pills, brighter value/action markers.
 
 **v1.21.2:** AH Flipper upgrade: after each scan it queues ALL profitable flips (best first) and works through them — a sold-out/broke flip moves to the next instead of restarting. After /ah sell it verifies the stack actually left your inventory (really listed); if not, it retries with /auction sell and reports instead of pretending.
+
+**v1.21.3 SAFE FLIP:** AH Flipper can't go minus by itself anymore — needs 5+ listings of an item, prices from the median of other sellers (troll-proof), cheapest must be 10%+ under market, hard break-even floor, received-count verification with re-pricing. New AH Settings: 'Min Profit (SAFE)' (default +15% after tax). Set your server's real tax % there too (default 5%).
+
+**v1.21.4:** AH Flipper works on ANY server IP with /ah (or /auction) — no IP setup needed; it uses the server you're connected to. Server field is now an optional label only.
