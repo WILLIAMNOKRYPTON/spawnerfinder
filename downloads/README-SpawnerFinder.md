@@ -5,7 +5,7 @@ Client-side ESP mod that highlights monster spawners through walls.
 Works in singleplayer and multiplayer (it only sees chunks the server has loaded for you).
 
 ## Download / file
-- `spawnerfinder-1.22.1+1.21.11.jar` — the mod (put this in your `mods` folder)
+- `spawnerfinder-1.22.2+1.21.11.jar` — the mod (put this in your `mods` folder)
 - Full source code: `spawner-finder/` project in the workspace
 
 ## Requirements
@@ -16,7 +16,7 @@ Works in singleplayer and multiplayer (it only sees chunks the server has loaded
 
 ## Install
 1. Install Fabric for 1.21.11.
-2. Drop **Fabric API** and **`spawnerfinder-1.22.1+1.21.11.jar`** into `.minecraft/mods`.
+2. Drop **Fabric API** and **`spawnerfinder-1.22.2+1.21.11.jar`** into `.minecraft/mods`.
 3. Launch the game with the Fabric profile.
 
 ## Controls
@@ -212,3 +212,5 @@ B -> **BUILDER** panel. Modes (walk around, it builds):
 **v1.22.0 MOB AIM ASSIST (PvE):** B -> FINDER -> 'Mob Aim Assist (hold attack)'. While you hold attack, aim smoothly pulls onto the nearest animal/monster within range (Aim Range 8-32, 60-degree cone, smooth capped turn speed). Never targets players.
 
 **v1.22.1:** Aim Assist now targets ALL mob types (bats, slimes, fish, etc.), not only Animal/Monster classes.
+
+**v1.22.2:** Aim Assist now activates while holding RIGHT-click (aim/lock), leaving left-click free to punch/attack normally.
