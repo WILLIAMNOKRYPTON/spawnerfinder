@@ -5,7 +5,7 @@ Client-side ESP mod that highlights monster spawners through walls.
 Works in singleplayer and multiplayer (it only sees chunks the server has loaded for you).
 
 ## Download / file
-- `spawnerfinder-1.20.2+1.21.11.jar` — the mod (put this in your `mods` folder)
+- `spawnerfinder-1.21.2+1.21.11.jar` — the mod (put this in your `mods` folder)
 - Full source code: `spawner-finder/` project in the workspace
 
 ## Requirements
@@ -16,7 +16,7 @@ Works in singleplayer and multiplayer (it only sees chunks the server has loaded
 
 ## Install
 1. Install Fabric for 1.21.11.
-2. Drop **Fabric API** and **`spawnerfinder-1.20.2+1.21.11.jar`** into `.minecraft/mods`.
+2. Drop **Fabric API** and **`spawnerfinder-1.21.2+1.21.11.jar`** into `.minecraft/mods`.
 3. Launch the game with the Fabric profile.
 
 ## Controls
@@ -184,3 +184,11 @@ B -> **BUILDER** panel. Modes (walk around, it builds):
 **v1.20.1:** Area Miner size limit removed — select and mine an area of any size (huge areas take a moment to count/scan at start).
 
 **v1.20.2:** Area Miner limit set to **500,000 blocks** per selection.
+
+## Spawner Finder upgrade (v1.21.0)
+- **Pin Nearest Spawner** (B -> FINDER): pins the closest spawner in white in the ESP; the Pinned value row left-click cycles to the next spawner, right-click clears.
+- **Spawner HUD** (top-left, toggleable): shows pinned or nearest spawner with mob, distance, compass direction and coords at all times.
+
+**v1.21.1:** UI upgrade (same drag-panel layout): bigger panels and rows, gradient headers with category icons, larger toggle pills, brighter value/action markers.
+
+**v1.21.2:** AH Flipper upgrade: after each scan it queues ALL profitable flips (best first) and works through them — a sold-out/broke flip moves to the next instead of restarting. After /ah sell it verifies the stack actually left your inventory (really listed); if not, it retries with /auction sell and reports instead of pretending.
