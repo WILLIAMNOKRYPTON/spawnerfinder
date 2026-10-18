@@ -5,7 +5,7 @@ Client-side ESP mod that highlights monster spawners through walls.
 Works in singleplayer and multiplayer (it only sees chunks the server has loaded for you).
 
 ## Download / file
-- `spawnerfinder-1.21.7+1.21.11.jar` — the mod (put this in your `mods` folder)
+- `spawnerfinder-1.21.10+1.21.11.jar` — the mod (put this in your `mods` folder)
 - Full source code: `spawner-finder/` project in the workspace
 
 ## Requirements
@@ -16,7 +16,7 @@ Works in singleplayer and multiplayer (it only sees chunks the server has loaded
 
 ## Install
 1. Install Fabric for 1.21.11.
-2. Drop **Fabric API** and **`spawnerfinder-1.21.7+1.21.11.jar`** into `.minecraft/mods`.
+2. Drop **Fabric API** and **`spawnerfinder-1.21.10+1.21.11.jar`** into `.minecraft/mods`.
 3. Launch the game with the Fabric profile.
 
 ## Controls
@@ -202,3 +202,9 @@ B -> **BUILDER** panel. Modes (walk around, it builds):
 **v1.21.6:** click-GUI panels are scrollable (mouse wheel inside a panel, max 12 rows shown, header shows position like 12/14) so ALL panels/rows are reachable at any window size or GUI scale.
 
 **v1.21.7:** menu shows ALL rows in every panel again; mouse wheel anywhere scrolls the whole menu page up/down (no per-panel scrolling).
+
+**v1.21.8 FAST FLIP:** AH Flipper ~10x faster — pages scanned every 3 ticks (was 10), rescan pause 2s (was 30s), buy/confirm/sell steps near-instant; fixed it declaring listings 'gone' before the page loaded (2s grace); relaxed second pass (3+ listings) still guarded by the no-loss floor so it actually finds flips on quiet markets.
+
+**v1.21.9 AUTO SELL:** new AH FLIP row 'Auto Sell My Inventory' — scans /ah for market prices, then lists your inventory stacks one by one at 98% of market median with /ah sell (verified listed; unsellable stacks are skipped, items without AH price data untouched). The flipper's own sell step is the same verified flow.
+
+**v1.21.10:** Auto Sell prices for profit — lists so you keep 105% of market median AFTER tax (no undercutting). Flipper remains floor-guarded (min profit after tax).
