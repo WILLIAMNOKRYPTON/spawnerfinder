@@ -5,7 +5,7 @@ Client-side ESP mod that highlights monster spawners through walls.
 Works in singleplayer and multiplayer (it only sees chunks the server has loaded for you).
 
 ## Download / file
-- `spawnerfinder-1.25.0+1.21.11.jar` — the mod (put this in your `mods` folder)
+- `spawnerfinder-1.25.2+1.21.11.jar` — the mod (put this in your `mods` folder)
 - Full source code: `spawner-finder/` project in the workspace
 
 ## Requirements
@@ -16,7 +16,7 @@ Works in singleplayer and multiplayer (it only sees chunks the server has loaded
 
 ## Install
 1. Install Fabric for 1.21.11.
-2. Drop **Fabric API** and **`spawnerfinder-1.25.0+1.21.11.jar`** into `.minecraft/mods`.
+2. Drop **Fabric API** and **`spawnerfinder-1.25.2+1.21.11.jar`** into `.minecraft/mods`.
 3. Launch the game with the Fabric profile.
 
 ## Controls
@@ -228,3 +228,7 @@ B -> **BUILDER** panel. Modes (walk around, it builds):
 **v1.24.1 Elytra Explorer fixes:** smart rockets (only fires when flight speed actually drops; selected slot restored after firing); hotbar refilled from inventory rockets automatically; auto-totem in offhand while exploring; stops with an ELYTRA ALMOST BROKEN warning at 25 durability left.
 
 **v1.25.0:** (1) Elytra Explorer sends the real START_FALL_FLYING packet itself (the 'click to fly') — no manual click needed. (2) Amethyst Finder: chunks with 6+ amethyst now flag BASE NEAR — big lavender box + beam highlight; counter shows base-near spots. (3) Freecam (FINDER panel): camera flies freely (WASD, jump up, sneak down, sprint fast) while your body stays put; toggle off to return.
+
+**v1.25.1 Elytra Explorer:** rockets are swapped INTO your hand from hotbar/inventory automatically (never stops for 'no rocket in hand'); heading is hard-locked for a perfectly straight flight line; it never gives up deploying; on base found it now KICKS you with a BASE FOUND disconnect screen + coords (like RTP Hunt).
+
+**v1.25.2:** Amethyst BASE NEAR now only triggers on player-placed amethyst (no budding amethyst within 12 blocks = not a natural geode), or amethyst next to a confirmed Chunk Base Finder hit. Natural geodes only get the small lavender ESP boxes.
