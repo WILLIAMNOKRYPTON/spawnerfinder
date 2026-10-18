@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spawner Finder — Minecraft 1.21.11 Fabric Mod</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#0b0f0c; color:#e8f0e8; font-family:'Segoe UI', Arial, sans-serif; }
+  .hero { background:linear-gradient(160deg,#0d2818 0%,#0b0f0c 60%); border-bottom:3px solid #2ecc71; padding:56px 20px 44px; text-align:center; }
+  .logo { display:inline-flex; align-items:center; justify-content:center; width:74px; height:74px; background:#2ecc71; color:#0b2b18; font-weight:900; font-size:30px; border-radius:14px; box-shadow:0 8px 30px rgba(46,204,113,.35); }
+  h1 { font-size:42px; margin:18px 0 6px; letter-spacing:1px; }
+  h1 span { color:#2ecc71; }
+  .sub { color:#9fb8a4; font-size:17px; }
+  .badge { display:inline-block; background:#14351f; color:#7be495; border:1px solid #2ecc71; border-radius:20px; padding:4px 14px; font-size:13px; margin-top:14px; }
+  .download { display:inline-block; margin-top:26px; background:#2ecc71; color:#062b16; font-weight:800; font-size:20px; padding:16px 42px; border-radius:12px; text-decoration:none; box-shadow:0 10px 34px rgba(46,204,113,.4); transition:transform .15s, background .15s; }
+  .download:hover { background:#35e07e; transform:translateY(-2px); }
+  .dl-note { color:#7d927f; font-size:13px; margin-top:10px; }
+  .wrap { max-width:1020px; margin:0 auto; padding:36px 20px 60px; }
+  h2 { color:#2ecc71; font-size:24px; margin:34px 0 14px; border-bottom:1px solid #1d2b1f; padding-bottom:8px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:16px; }
+  .card { background:#111711; border:1px solid #223322; border-radius:12px; padding:18px; }
+  .card h3 { font-size:17px; margin-bottom:8px; }
+  .card p { color:#a9bfa9; font-size:14px; line-height:1.55; }
+  .card .ico { font-size:24px; }
+  ol, ul { margin-left:22px; color:#c4d6c4; line-height:1.7; font-size:15px; }
+  code { background:#1a2a1e; color:#7be495; padding:2px 7px; border-radius:5px; font-size:13px; }
+  table { width:100%; border-collapse:collapse; font-size:14px; }
+  td { padding:8px 10px; border-bottom:1px solid #1d2b1f; color:#c4d6c4; }
+  td:first-child { color:#7be495; font-weight:700; white-space:nowrap; width:190px; }
+  .warn { background:#2a1414; border:1px solid #7a2d2d; border-radius:12px; padding:16px 18px; color:#e8b4b4; font-size:14px; line-height:1.6; }
+  footer { text-align:center; color:#5f735f; font-size:13px; padding:26px; border-top:1px solid #1d2b1f; }
+  a { color:#2ecc71; }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="logo">SF</div>
+  <h1>SPAWNER <span>FINDER</span></h1>
+  <p class="sub">The all-in-one finder client: spawners, bases, netherite, RTP hunts, auto miner, auto builder &amp; AH flipping.</p>
+  <div><span class="badge">Minecraft 1.21.11 · Fabric · Client-side</span></div>
+  <br>
+  <a class="download" href="downloads/SpawnerFinder-1.20.2.zip" download>⬇ DOWNLOAD v1.20.2 (ZIP)</a>
+  <p class="dl-note">SpawnerFinder-1.20.2.zip · unzip it, put the .jar inside into your mods folder · also available: <a href="downloads/README-SpawnerFinder.md" download>README / full guide</a></p>
+</div>
+
+<div class="wrap">
+
+  <h2>✨ Features</h2>
+  <div class="grid">
+    <div class="card"><div class="ico">💀</div><h3>Spawner ESP</h3><p>Colored through-wall boxes on spawners — skeleton-first filters (skeleton only / all / custom), player-near-spawner pings with sound, title and chat.</p></div>
+    <div class="card"><div class="ico">🟩</div><h3>Chunk Base Finder</h3><p>Scans loaded chunks (even underground) for player bases and marks them with a green glow + beam to the surface. Villages &amp; trial chambers filtered out.</p></div>
+    <div class="card"><div class="ico">🟪</div><h3>Netherite Finder</h3><p>Ancient debris highlighted in magenta through walls in loaded chunks.</p></div>
+    <div class="card"><div class="ico">🌀</div><h3>RTP Hunts</h3><p>Auto /rtp overworld on a timer (30–600s) hunting a person at a skeleton spawner or a player base — kicks you with <b>SKELETON FOUND</b> / <b>BASE FOUND</b> + coords on the disconnect screen.</p></div>
+    <div class="card"><div class="ico">⛏️</div><h3>Area Miner</h3><p>Select any area (up to 500K blocks), custom width/length/up/down, dig direction, named selections, Fast Mining (Turbo), and Mine-Until-Base that tunnels until it finds a base and mines you inside.</p></div>
+    <div class="card"><div class="ico">🏗️</div><h3>Auto Builder</h3><p>You walk, it builds: Bridge (blocks under your feet), Platform (3×3 floor), and Printer — copy any build and it rebuilds it block by block from your hotbar.</p></div>
+    <div class="card"><div class="ico">🗿</div><h3>Attack Escape</h3><p>When you get attacked (or drop to 5 hearts), a totem jumps to your offhand and /rtp fires to escape.</p></div>
+    <div class="card"><div class="ico">💰</div><h3>AH Flipper + Orders</h3><p>Scans /ah (or /auction), calculates real profit after tax, auto-buys cheap listings, re-lists with /ah sell, and fulfills /orders — endlessly. Server IP &amp; tax settings built in.</p></div>
+    <div class="card"><div class="ico">👁️</div><h3>Watcher HUD</h3><p>Top-corner warning showing who's aiming at you, with names and distances.</p></div>
+  </div>
+
+  <h2>📥 How to install</h2>
+  <ol>
+    <li>Install <b>Fabric Loader</b> for Minecraft <b>1.21.11</b> (fabricmc.net) and the <b>Fabric API</b> mod.</li>
+    <li>Download the jar from the big green button above.</li>
+    <li>Put <code>SpawnerFinder-1.20.2.jar</code> in your <code>.minecraft/mods</code> folder — make sure no older spawnerfinder jars are in there.</li>
+    <li>Start the game and press <b>B</b>.</li>
+  </ol>
+
+  <h2>🎮 Controls</h2>
+  <table>
+    <tr><td>B</td><td>Open / close the Spawner Finder menu</td></tr>
+    <tr><td>F8</td><td>Toggle spawner ESP</td></tr>
+    <tr><td>F9</td><td>Cycle spawner filter (skeleton / all / custom)</td></tr>
+    <tr><td>[ and ]</td><td>Set miner area corners (look at a block first)</td></tr>
+    <tr><td>WASD / jump</td><td>Stops RTP hunts &amp; alerts (when "Stop When I Move" is on)</td></tr>
+    <tr><td>/spawnerfinder</td><td>In-game commands</td></tr>
+  </table>
+
+  <h2>📖 Full guide</h2>
+  <p style="color:#c4d6c4; line-height:1.7;">Every feature explained in detail: <a href="downloads/README-SpawnerFinder.md" download>download the README</a>.</p>
+
+  <h2>⚠️ Notes</h2>
+  <div class="warn">
+    Client-side mod: ESP features only see chunks the server has loaded to you. Server anti-xray disguises buried ores/debris as stone, so fully hidden blocks can't be shown by any client. Automation (RTP, AH, mining) talks to the server like a player does — use it on servers where you're okay with that. Always keep only ONE spawnerfinder jar in your mods folder.
+  </div>
+
+</div>
+
+<footer>Spawner Finder v1.20.2 · Minecraft 1.21.11 · Fabric · Press B in game</footer>
+
+</body>
+</html>
